@@ -33,7 +33,7 @@ class HomeControllerTests {
 		course.setStartDate("01/01/2021");
 		course.setStatus("Completed");
 		courseList.add(course);
-		User mockUser = new User(courseList);
+		User mockUser = new User(courseList, null, null);
 		user = homeController.getUsers();
 		when(courseListRepository.findAll()).thenReturn(courseList);
 		System.out.println(user);

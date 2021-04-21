@@ -1,20 +1,20 @@
 package com.example.demo.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import java.util.List;
 
 public class  Personnel{
 
 	private Personal personal;
+	private Organization organization;
+	private List<Employment> employment;
 	
 	public Personnel(){}
 	
-	public Personnel(Personal personal) {
+	public Personnel(Personal personal,Organization organization,List<Employment> employment) {
 		super();
 		this.personal = personal;
+		this.organization=organization;
+		this.employment=employment;
 	}
 	public Personal getPersonal() {
 		return personal;
@@ -22,5 +22,21 @@ public class  Personnel{
 
 	public void setPersonal(Personal personal) {
 		this.personal = personal;
+	}
+
+	public Organization getOrganization() {
+		return organization;
+	}
+
+	public void setOrganization(Organization organization) {
+		this.organization = organization;
+	}
+
+	public List<Employment> getEmployment() {
+		return employment;
+	}
+
+	public void setEmployment(List<Employment> employment) {
+		this.employment = employment;
 	}
 }
