@@ -29,10 +29,15 @@ public class User {
 	public void setCourseList(List<CourseList> courseList) {
 		this.courseList = courseList;
 	}
-	public List<Competency> getcompetencyList() {
+	public List<Competency> getCompetencyList() {
 		return competencyList;
 	}
-	public void setcompetencyList(List<Competency> competencyList) {
+	public void setCompetencyList(List<Competency> competencyList) {
 		this.competencyList = competencyList;
+	}
+	@Override
+	public String toString() {
+		return "User [personnel=" + personnel + ", courseList=" + courseList + ", competencyList=" + competencyList
+				+ "]";
 	}
 }

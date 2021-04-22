@@ -38,7 +38,7 @@ public class UserCreatorImpl implements UserCreatorSvc{
 		List<Competency> competencies = this.competencyListRepository.findAll();
 		
 		user.setCourseList(courseList);
-		user.setcompetencyList(competencies);
+		user.setCompetencyList(competencies);
 		user.setPersonnel(setUserPersonnel());
 		return user;
 	}

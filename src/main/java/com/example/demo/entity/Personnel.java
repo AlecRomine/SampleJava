@@ -39,4 +39,10 @@ public class  Personnel{
 	public void setEmployment(List<Employment> employment) {
 		this.employment = employment;
 	}
+	
+	@Override
+	public String toString() {
+		return "Personnel [personal=" + personal + ", organization=" + organization + ", employment=" + employment
+				+ "]";
+	}
 }
