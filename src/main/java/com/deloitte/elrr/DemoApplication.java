@@ -25,7 +25,7 @@ public class DemoApplication implements CommandLineRunner{
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
 	}
-	
+
 	@Autowired
 	private CourseListRepository courseListRepository;
 	@Autowired
@@ -38,6 +38,7 @@ public class DemoApplication implements CommandLineRunner{
 	private OrganizationRepository organizationRepository;
     @Override
     public void run(String...args) throws Exception {
+	/*
     	List<CourseList> c1 = new ArrayList<>();
     	List<CourseList> c2 = new ArrayList<>();
     	c1.add(new CourseList("ACQ","Acquisition Management","USAF","01/01/2021","03/31/2021","","","Enrolled"));
@@ -50,9 +51,8 @@ public class DemoApplication implements CommandLineRunner{
     	this.courseListRepository.save(new CourseList("CTC 101","Protecting Sensitive Information","USAF","01/01/2020","01/07/2021","01/07/2020","01/07/2022","Complete"));
     	this.competencyListRepository.save(new Competency(0, "Skills and Roles: Business Skills and Acumen ", "Intermediate", c1, "", ""));
     	this.competencyListRepository.save(new Competency(1, "Contract Principles: General Contracting Concepts ", "Intermediate", c2, "/static/media/badge_services_Marked.4aa185ba.png", "12/20/2020"));
-    	this.personalRepository.save(new Personal("Alice Beth Smith", "Alice Smith","",  "", "", "", "Smith", "0987654321", "1234567890", "(480) 555-1234", "Yes", "July 4, 1985", "alice.smith@us.af.mil", "Organization", "American Citizen", "Y", "F", "English", "Smith S. Smithson (480) 555-1234", "123 Taft St, Crystal City, VA 22201", "Apartment 205"));
     	this.employmentRepository.save(new Employment("Air Force","12/14/2019", "boolean(T/F)", "DoD Air Force Acquisitions", "", "Acquisition Manager","12/07/2019",  "Manager of Team Acquisitions"));
     	this.employmentRepository.save(new Employment("Air Force", "12/14/2018", "boolean(T/F)", "DoD Air Force Acquisitions", "12/14/2019", "Acquisition Manager","12/07/2018", "Jr. Manager of Team Acquisitions"));
-    	this.organizationRepository.save(new Organization("AETC", "", "Air Force", "Lorem Ipsum", "D0DAF", "00001234567", "Yes", "01/01/2000", "G0V4", "D0D Air Force", "Lorem Ipsum", "XX/XX/XXXX"));
+    	this.organizationRepository.save(new Organization("AETC", "", "Air Force", "Lorem Ipsum", "D0DAF", "00001234567", "Yes", "01/01/2000", "G0V4", "D0D Air Force", "Lorem Ipsum", "XX/XX/XXXX"));*/
     }
 }

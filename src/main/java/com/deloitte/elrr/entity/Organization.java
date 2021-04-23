@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="Organization")
+@Table(name="organization")
 public class Organization {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -153,6 +153,17 @@ public class Organization {
 
 	public void setAccreditedExpirationDate(String accreditedExpirationDate) {
 		this.accreditedExpirationDate = accreditedExpirationDate;
+	}
+
+	@Override
+	public String toString() {
+		return "Organization [id=" + id + ", organizationName=" + organizationName + ", industryIdentifier="
+				+ industryIdentifier + ", parentOrganization=" + parentOrganization + ", accreditationType="
+				+ accreditationType + ", organizationIdentifier=" + organizationIdentifier + ", organizationFEIN="
+				+ organizationFEIN + ", organizationAccredits=" + organizationAccredits + ", accreditationAwardDate="
+				+ accreditationAwardDate + ", organizationIdentificationCode=" + organizationIdentificationCode
+				+ ", organizationDescription=" + organizationDescription + ", accreditedBy=" + accreditedBy
+				+ ", accreditedExpirationDate=" + accreditedExpirationDate + "]";
 	}
 	
 }

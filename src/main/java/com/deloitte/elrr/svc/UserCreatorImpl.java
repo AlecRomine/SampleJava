@@ -47,9 +47,13 @@ public class UserCreatorImpl implements UserCreatorSvc{
 		Personnel personnel = new Personnel();
 		Optional<Personal> personal = Optional.of(new Personal());
 		Optional<Organization> organization = Optional.of(new Organization());
-		
+
 		personal = this.personalRepository.findById(1L);
+		System.out.println(personal.get().toString());
+		
 		organization = this.organizationRepository.findById(1L);
+		System.out.println(organization.get().toString());
+		
 		personnel.setPersonal(personal.get());
 		personnel.setOrganization(organization.get());
 		personnel.setEmployment(this.employmentRepository.findAll());

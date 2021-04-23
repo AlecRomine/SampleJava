@@ -7,7 +7,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 @Entity
-@Table(name="Personal")
+@Table(name="personal")
 public class Personal {
 	
 	@Id
@@ -208,5 +208,16 @@ public class Personal {
 	}
 	public void setAddressTwo(String addressTwo) {
 		this.addressTwo = addressTwo;
+	}
+	@Override
+	public String toString() {
+		return "Personal [id=" + id + ", name=" + name + ", preferredName=" + preferredName + ", title=" + title
+				+ ", namePrefix=" + namePrefix + ", nameSuffix=" + nameSuffix + ", qualificationCode="
+				+ qualificationCode + ", maidenName=" + maidenName + ", hrID=" + hrID + ", studentId=" + studentId
+				+ ", telephoneNumber=" + telephoneNumber + ", primaryPhoneNumber=" + primaryPhoneNumber + ", birthdate="
+				+ birthdate + ", email=" + email + ", emailType=" + emailType + ", citizenship=" + citizenship
+				+ ", veteran=" + veteran + ", sex=" + sex + ", primaryLanguage=" + primaryLanguage
+				+ ", emergencyContact=" + emergencyContact + ", address=" + address + ", addressTwo=" + addressTwo
+				+ "]";
 	}
 }
