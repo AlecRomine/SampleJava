@@ -13,29 +13,29 @@ public class Organization {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
-	@Column(name = "organizationName")
+	@Column(name = "organization_name")
 	private String organizationName;
-	@Column(name = "industryIdentifier")
+	@Column(name = "industry_identifier")
 	private String industryIdentifier;
-	@Column(name = "parentOrganization")
+	@Column(name = "parent_organization")
 	private String parentOrganization;
-	@Column(name = "accreditationType")
+	@Column(name = "accreditation_type")
 	private String accreditationType;
-	@Column(name = "organizationIdentifier")
+	@Column(name = "organization_identifier")
 	private String organizationIdentifier;
-	@Column(name = "organizationFEIN")
+	@Column(name = "organization_fein")
 	private String organizationFEIN;
-	@Column(name = "organizationAccredits")
+	@Column(name = "organization_accredits")
 	private String organizationAccredits;
-	@Column(name = "accreditationAwardDate")
+	@Column(name = "accreditation_award_date")
 	private String accreditationAwardDate;
-	@Column(name = "organizationIdentificationCode")
+	@Column(name = "organization_identification_code")
 	private String organizationIdentificationCode;
-	@Column(name = "organizationDescription")
+	@Column(name = "organization_description")
 	private String organizationDescription;
-	@Column(name = "accreditedBy")
+	@Column(name = "accredited_by")
 	private String accreditedBy;
-	@Column(name = "accreditedExpirationDate")
+	@Column(name = "accredited_expiration_date")
 	private String 	accreditedExpirationDate;
 	
 	public Organization() {}

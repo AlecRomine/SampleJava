@@ -8,28 +8,29 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="CourseList")
+@Table(name="courselist")
 public class CourseList {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
-	@Column(name="courseID")
+	@Column(name="course_id")
 	private String courseID;
-	@Column(name="courseName")
+	@Column(name="course_name")
 	private String courseName;
-	@Column(name="providerName")
+	@Column(name="provider_name")
 	private String providerName;
-	@Column(name="startDate")
+	@Column(name="start_date")
 	private String startDate;
-	@Column(name="endDate")
+	@Column(name="end_date")
 	private String endDate;
-	@Column(name="awardDate")
+	@Column(name="award_date")
 	private String awardDate;
-	@Column(name="expirationDate")
+	@Column(name="expiration_date")
 	private String expirationDate;
 	@Column(name="status")
 	private String status;
+	
 	public CourseList() {}
 	public CourseList(String courseID, String courseName, String providerName, String startDate, String endDate,
 	String awardDate, String expirationDate, String status) {
@@ -90,5 +91,11 @@ public class CourseList {
 	}
 	public void setStatus(String status) {
 		this.status = status;
+	}
+	@Override
+	public String toString() {
+		return "CourseList [id=" + id + ", courseID=" + courseID + ", courseName=" + courseName + ", providerName="
+				+ providerName + ", startDate=" + startDate + ", endDate=" + endDate + ", awardDate=" + awardDate
+				+ ", expirationDate=" + expirationDate + ", status=" + status + "]";
 	}
 }

@@ -15,31 +15,31 @@ public class Personal {
 	private long id;
 	@Column(name = "name")
 	private String name;
-	@Column(name = "preferredName")
+	@Column(name = "preferred_name")
 	private String preferredName;
 	@Column(name = "title")
 	private String title;
-	@Column(name = "namePrefix")
+	@Column(name = "name_prefix")
 	private String namePrefix;
-	@Column(name = "nameSuffix")
+	@Column(name = "name_suffix")
 	private String nameSuffix;
-	@Column(name = "qualificationCode")
+	@Column(name = "qualification_code")
 	private String qualificationCode;
-	@Column(name = "maidenName")
+	@Column(name = "maiden_name")
 	private String maidenName;
-	@Column(name = "hrID")
+	@Column(name = "hrid")
 	private String hrID;
-	@Column(name = "studentId")
+	@Column(name = "student_id")
 	private String studentId;
-	@Column(name = "telephoneNumber")
+	@Column(name = "telephone_number")
 	private String telephoneNumber;
-	@Column(name = "primaryPhoneNumber")
+	@Column(name = "primary_phone_number")
 	private String primaryPhoneNumber;
 	@Column(name = "birthdate")
 	private String birthdate;
 	@Column(name = "email")
 	private String email;
-	@Column(name = "emailType")
+	@Column(name = "email_type")
 	private String emailType;
 	@Column(name = "citizenship")
 	private String citizenship;
@@ -47,13 +47,13 @@ public class Personal {
 	private String veteran;
 	@Column(name = "sex")
 	private String sex;
-	@Column(name = "primaryLanguage")
+	@Column(name = "primary_language")
 	private String primaryLanguage;
-	@Column(name = "emergencyContact")
+	@Column(name = "emergency_contact")
 	private String emergencyContact;
 	@Column(name = "address")
 	private String address;
-	@Column(name = "addressTwo")
+	@Column(name = "address_two")
 	private String addressTwo;
 	
 	public Personal() {}

@@ -28,7 +28,7 @@ public class HomeController {
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm:ss dd/MM/yyyy");  
 		LocalDateTime now = LocalDateTime.now();  
 		System.out.println(dtf.format(now));  
-		
+		System.out.println(user.toString());
 		return user;
 	}
 }

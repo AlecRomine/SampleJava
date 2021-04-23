@@ -11,41 +11,32 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="Competency")
+@Table(name="competency")
 public class Competency {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
-	@Column(name = "compId")
-	private int compId;	
-	@Column(name = "compName")
+	@Column(name = "comp_name")
 	private String compName;
-	@Column(name = "compEdLevel")
+	@Column(name = "comp_ed_level")
 	private String compEdLevel;
-	@Column
-    @ElementCollection(targetClass=CourseList.class)
-	private List<CourseList> courseList;
+//	@Column
+//  @ElementCollection(targetClass=CourseList.class)
+//	private List<CourseList> courseList;
 	@Column(name = "badge")
 	private String badge;
-	@Column(name = "confDate")
+	@Column(name = "conf_date")
 	private String confDate;
 	
 	
 	public Competency() {}
-	public Competency(int compId, String compName, String compEdLevel, List<CourseList> courseList, String badge, String confDate) {
+	public Competency(String compName, String compEdLevel/*, List<CourseList> courseList*/, String badge, String confDate) {
 		super();
-		this.compId = compId;
 		this.compName = compName;
 		this.compEdLevel = compEdLevel;
-		this.courseList = courseList;
+//		this.courseList = courseList;
 		this.badge = badge;
 		this.confDate = confDate;
-	}
-	public int getCompId() {
-		return compId;
-	}
-	public void setCompId(int compId) {
-		this.compId = compId;
 	}
 	public String getCompName() {
 		return compName;
@@ -59,12 +50,12 @@ public class Competency {
 	public void setCompEdLevel(String compEdLevel) {
 		this.compEdLevel = compEdLevel;
 	}
-	public List<CourseList> getCourseList() {
-		return courseList;
-	}
-	public void setCourseList(List<CourseList> courseList) {
-		this.courseList = courseList;
-	}
+//	public List<CourseList> getCourseList() {
+//		return courseList;
+//	}
+//	public void setCourseList(List<CourseList> courseList) {
+//		this.courseList = courseList;
+//	}
 	public void setBadge(String badge) {
 		this.badge = badge;
 	}
@@ -76,5 +67,10 @@ public class Competency {
 	}
 	public void setConfDate(String confDate) {
 		this.confDate = confDate;
+	}
+	@Override
+	public String toString() {
+		return "Competency [id=" + id + ", compName=" + compName + ", compEdLevel=" + compEdLevel + /*", courseList="
+				+ courseList +*/ ", badge=" + badge + ", confDate=" + confDate + "]";
 	}
 }

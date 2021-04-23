@@ -1,5 +1,6 @@
 package com.deloitte.elrr.svc;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -34,8 +35,12 @@ public class UserCreatorImpl implements UserCreatorSvc{
 	@Override
 	public User userCreator() {
 		User user = new User();
-		List<CourseList> courseList = this.courseListRepository.findAll();
-		List<Competency> competencies = this.competencyListRepository.findAll();
+
+		List<CourseList> courseList = new ArrayList<>();
+		courseList.addAll(courseListRepository.findAll());
+		List<Competency> competencies = new ArrayList<>();
+		competencies.addAll(competencyListRepository.findAll());
+		
 		
 		user.setCourseList(courseList);
 		user.setCompetencyList(competencies);
@@ -49,14 +54,11 @@ public class UserCreatorImpl implements UserCreatorSvc{
 		Optional<Organization> organization = Optional.of(new Organization());
 
 		personal = this.personalRepository.findById(1L);
-		System.out.println(personal.get().toString());
-		
 		organization = this.organizationRepository.findById(1L);
-		System.out.println(organization.get().toString());
 		
 		personnel.setPersonal(personal.get());
 		personnel.setOrganization(organization.get());
-		personnel.setEmployment(this.employmentRepository.findAll());
+		personnel.setEmployment(employmentRepository.findAll());
 		
 		return personnel;
 	}

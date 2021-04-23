@@ -13,21 +13,21 @@ public class Employment {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
-	@Column(name = "employerName")
+	@Column(name = "employer_name")
 	private String employerName;
-	@Column(name = "employmentStartDate")
+	@Column(name = "employment_start_date")
 	private String employmentStartDate;
 	@Column(name = "employed")
 	private String employed;
-	@Column(name = "employerDepartment")
+	@Column(name = "employer_department")
 	private String employerDepartment;
-	@Column(name = "employmentEndDate")
+	@Column(name = "employment_end_date")
 	private String employmentEndDate;
 	@Column(name = "occupation")
 	private String occupation;
-	@Column(name = "hireDate")
+	@Column(name = "hire_date")
 	private String hireDate;
-	@Column(name = "positionTitle")
+	@Column(name = "position_title")
 	private String positionTitle;
 	public Employment() {}
 	public Employment(String employerName, String employmentStartDate, String employed, String employerDepartment,
@@ -95,6 +95,13 @@ public class Employment {
 	}
 	public void setPositionTitle(String positionTitle) {
 		this.positionTitle = positionTitle;
+	}
+	@Override
+	public String toString() {
+		return "Employment [id=" + id + ", employerName=" + employerName + ", employmentStartDate="
+				+ employmentStartDate + ", employed=" + employed + ", employerDepartment=" + employerDepartment
+				+ ", employmentEndDate=" + employmentEndDate + ", occupation=" + occupation + ", hireDate=" + hireDate
+				+ ", positionTitle=" + positionTitle + "]";
 	}
 	
 }
