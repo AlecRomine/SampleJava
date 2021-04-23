@@ -1,6 +1,6 @@
-package com.example.demo.svc;
+package com.deloitte.elrr.svc;
 
-import com.example.demo.entity.User;
+import com.deloitte.elrr.entity.User;
 
 public interface UserCreatorSvc {
 

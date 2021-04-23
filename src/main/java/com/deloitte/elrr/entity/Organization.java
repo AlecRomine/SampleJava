@@ -1,4 +1,4 @@
-package com.example.demo.entity;
+package com.deloitte.elrr.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -13,7 +13,7 @@ public class Organization {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
-	@Column(name = "name")
+	@Column(name = "organizationName")
 	private String organizationName;
 	@Column(name = "industryIdentifier")
 	private String industryIdentifier;

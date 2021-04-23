@@ -1,4 +1,4 @@
-package com.example.demo.controller;
+package com.deloitte.elrr.controller;
 
 import static org.mockito.Mockito.when;
 
@@ -10,11 +10,12 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.example.demo.entity.Competency;
-import com.example.demo.entity.CourseList;
-import com.example.demo.entity.Personnel;
-import com.example.demo.entity.User;
-import com.example.demo.svc.UserCreatorSvc;
+import com.deloitte.elrr.controller.HomeController;
+import com.deloitte.elrr.entity.Competency;
+import com.deloitte.elrr.entity.CourseList;
+import com.deloitte.elrr.entity.Personnel;
+import com.deloitte.elrr.entity.User;
+import com.deloitte.elrr.svc.UserCreatorSvc;
 
 @SpringBootTest
 class HomeControllerTests {

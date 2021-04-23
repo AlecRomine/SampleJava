@@ -1,4 +1,4 @@
-package com.example.demo.entity;
+package com.deloitte.elrr.entity;
 
 import java.util.List;
 
@@ -27,16 +27,19 @@ public class Competency {
 	private List<CourseList> courseList;
 	@Column(name = "badge")
 	private String badge;
+	@Column(name = "confDate")
+	private String confDate;
 	
 	
 	public Competency() {}
-	public Competency(int compId, String compName, String compEdLevel, List<CourseList> courseList, String badge) {
+	public Competency(int compId, String compName, String compEdLevel, List<CourseList> courseList, String badge, String confDate) {
 		super();
 		this.compId = compId;
 		this.compName = compName;
 		this.compEdLevel = compEdLevel;
 		this.courseList = courseList;
 		this.badge = badge;
+		this.confDate = confDate;
 	}
 	public int getCompId() {
 		return compId;
@@ -67,5 +70,11 @@ public class Competency {
 	}
 	public String getBadge() {
 		return badge;
+	}
+	public String getConfDate() {
+		return confDate;
+	}
+	public void setConfDate(String confDate) {
+		this.confDate = confDate;
 	}
 }

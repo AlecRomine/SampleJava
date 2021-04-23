@@ -1,8 +1,8 @@
-package com.example.demo.repository;
+package com.deloitte.elrr.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.example.demo.entity.Organization;
+import com.deloitte.elrr.entity.Organization;
 
 public interface OrganizationRepository  extends JpaRepository<Organization, Long>{
 

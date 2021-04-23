@@ -1,4 +1,4 @@
-package com.example.demo.controller;
+package com.deloitte.elrr.controller;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -9,9 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.entity.User;
-
-import com.example.demo.svc.UserCreatorSvc;
+import com.deloitte.elrr.entity.User;
+import com.deloitte.elrr.svc.UserCreatorSvc;
 
 @CrossOrigin(origins = "http://localhost:3001")
 @RestController

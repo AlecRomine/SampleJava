@@ -1,4 +1,4 @@
-package com.example.demo.svc;
+package com.deloitte.elrr.svc;
 
 import java.util.List;
 import java.util.Optional;
@@ -6,17 +6,17 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.demo.entity.Competency;
-import com.example.demo.entity.CourseList;
-import com.example.demo.entity.Organization;
-import com.example.demo.entity.Personal;
-import com.example.demo.entity.Personnel;
-import com.example.demo.entity.User;
-import com.example.demo.repository.CompetencyRepository;
-import com.example.demo.repository.CourseListRepository;
-import com.example.demo.repository.EmploymentRepository;
-import com.example.demo.repository.OrganizationRepository;
-import com.example.demo.repository.PersonalRepository;
+import com.deloitte.elrr.entity.Competency;
+import com.deloitte.elrr.entity.CourseList;
+import com.deloitte.elrr.entity.Organization;
+import com.deloitte.elrr.entity.Personal;
+import com.deloitte.elrr.entity.Personnel;
+import com.deloitte.elrr.entity.User;
+import com.deloitte.elrr.repository.CompetencyRepository;
+import com.deloitte.elrr.repository.CourseListRepository;
+import com.deloitte.elrr.repository.EmploymentRepository;
+import com.deloitte.elrr.repository.OrganizationRepository;
+import com.deloitte.elrr.repository.PersonalRepository;
 
 
 @Service

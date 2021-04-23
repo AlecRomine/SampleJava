@@ -1,4 +1,4 @@
-package com.example.demo.entity;
+package com.deloitte.elrr.entity;
 
 import java.util.List;
 
