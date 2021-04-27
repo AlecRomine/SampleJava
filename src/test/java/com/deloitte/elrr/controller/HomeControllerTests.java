@@ -36,7 +36,7 @@ class HomeControllerTests {
 		mockUser.setCourseList(courseList);
 		mockUser.setCompetencyList(competencies);
 		when(userCreatorSvc.userCreator()).thenReturn(mockUser);
-		user = homeController.getUsers();
+		user = homeController.getUsers("","");
 		assert(user.equals(mockUser));
 	}
 }
