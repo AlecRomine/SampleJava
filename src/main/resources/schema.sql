@@ -52,8 +52,7 @@ CREATE TABLE COURSELIST(
   	provider_name VARCHAR(250) NOT NULL,
   	start_date VARCHAR(250) NOT NULL,
   	end_date VARCHAR(250) NOT NULL,
-  	award_date VARCHAR(250) NOT NULL,
-  	expiration_date VARCHAR(250) NOT NULL,
+  	enrollment_date VARCHAR(250) NOT NULL,
   	status VARCHAR(250) NOT NULL
 );
 
@@ -62,7 +61,8 @@ CREATE TABLE COMPETENCY(
   	comp_name VARCHAR(250) NOT NULL,
   	comp_ed_level VARCHAR(250) NOT NULL,
   	badge VARCHAR(250) NOT NULL,
-  	conf_date VARCHAR(250) NOT NULL
+  	conf_date VARCHAR(250) NOT NULL,
+  	course_list VARCHAR(250)
 );
 
 CREATE TABLE EMPLOYMENT(
