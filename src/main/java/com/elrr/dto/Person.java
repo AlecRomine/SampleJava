@@ -22,14 +22,29 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-public class CourseList {
-
+public class Person {
+	
 	private long id;
-	private String courseid;
 	private String name;
-	private String courseprovidername;
-	private String coursestartdate;
-	private String courseenddate;
-	private String courseenrollmentdate;
-	private String courseinstructionmethod;
+	private String preferredname;
+	private String title;
+	private String nameprefix;
+	private String namesuffix;
+	private String qualificationcode;
+	private String maidenname;
+	private String hrID;
+	private String studentId;
+	private String telephonenumber;
+	private String primaryphonenumber;
+	private String birthdate;
+	private String email;
+	private String emailtype;
+	private String citizenship;
+	private String militaryveteranindicator;
+	private String sex;
+	private String primarylanguage;
+	private String emergencycontact;
+	private String address;
+	private String addresstwo;
+	
 }

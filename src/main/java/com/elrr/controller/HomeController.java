@@ -11,23 +11,27 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.elrr.apiCalls.ApiCalls;
 import com.elrr.dto.User;
-import com.elrr.svc.UserCreatorSvc;
 
 @CrossOrigin(origins = {"http://localhost:3001", "http://localhost:3004","http://localhost:5000"})
 @RestController
 @RequestMapping("api")
 public class HomeController {
 	
+//	@Autowired
+//	private UserCreatorSvc userCreatorSvc;
 	@Autowired
-	private UserCreatorSvc userCreatorSvc;
+	private ApiCalls apiCalls;
 	
 	@RequestMapping(value = "/user", method = RequestMethod.POST, produces = {"application/json"})
 	public User getUsers(@RequestParam(required = false) String userName, @RequestParam(required = false) String password) {
 		System.out.println(userName +"_"+ password);
+		apiCalls.learnerInfoGatherer(userName, password);
 		
 		User user = new User();
-		user = userCreatorSvc.userCreator();
+//		user = userCreatorSvc.userCreator();
+		user = apiCalls.learnerInfoGatherer(userName, password);
 		
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm:ss dd/MM/yyyy");  
 		LocalDateTime now = LocalDateTime.now();  
@@ -40,7 +44,7 @@ public class HomeController {
 		System.out.println(userName +"_"+ password);
 
 		User user = new User();
-		user = userCreatorSvc.userCreator();
+//		user = userCreatorSvc.userCreator();
 		
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm:ss dd/MM/yyyy");  
 		LocalDateTime now = LocalDateTime.now();  

@@ -12,12 +12,7 @@ import com.elrr.dto.Competency;
 import com.elrr.dto.CourseList;
 import com.elrr.dto.Employment;
 import com.elrr.dto.Organization;
-import com.elrr.dto.Personal;
-import com.elrr.repository.CompetencyRepository;
-import com.elrr.repository.CourseListRepository;
-import com.elrr.repository.EmploymentRepository;
-import com.elrr.repository.OrganizationRepository;
-import com.elrr.repository.PersonalRepository;
+import com.elrr.dto.Person;
 
 @SpringBootApplication
 public class DemoApplication /*implements CommandLineRunner*/{

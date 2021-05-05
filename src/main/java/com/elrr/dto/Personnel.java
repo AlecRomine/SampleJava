@@ -2,26 +2,27 @@ package com.elrr.dto;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class  Personnel{
 
-	private Personal personal;
+	private Person person;
 	private Organization organization;
 	private List<Employment> employment;
 	
-	public Personnel(){}
-	
-	public Personnel(Personal personal,Organization organization,List<Employment> employment) {
-		super();
-		this.personal = personal;
-		this.organization=organization;
-		this.employment=employment;
-	}
-	public Personal getPersonal() {
-		return personal;
+	public Person getperson() {
+		return person;
 	}
 
-	public void setPersonal(Personal personal) {
-		this.personal = personal;
+	public void setperson(Person person) {
+		this.person = person;
 	}
 
 	public Organization getOrganization() {
@@ -42,7 +43,7 @@ public class  Personnel{
 	
 	@Override
 	public String toString() {
-		return "Personnel [personal=" + personal + ", organization=" + organization + ", employment=" + employment
+		return "Personnel [person=" + person + ", organization=" + organization + ", employment=" + employment
 				+ "]";
 	}
 }
