@@ -8,13 +8,11 @@ public class User {
 	private Personnel personnel;
 	private List<CourseList> courses;
 	private List<Competency> competencies;
-	private ContactInformation contactinformation;
 	public User() {
 
     }
-	public User(List<CourseList> courses,List<Competency> competencies,Personnel personnel,ContactInformation contactinformation) {
+	public User(List<CourseList> courses,List<Competency> competencies,Personnel personnel) {
 		super();
-		this.contactinformation = contactinformation;
 		this.courses = courses;
 		this.competencies = competencies;
 		this.personnel =personnel;
@@ -36,12 +34,6 @@ public class User {
 	}
 	public void setCompetencies(List<Competency> competencies) {
 		this.competencies = competencies;
-	}
-	public ContactInformation getContactinformation() {
-		return contactinformation;
-	}
-	public void setContactinformation(ContactInformation contactinformation) {
-		this.contactinformation = contactinformation;
 	}
 	@Override
 	public String toString() {

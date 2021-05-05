@@ -24,8 +24,8 @@ public class HomeController {
 	@Autowired
 	private ApiCalls apiCalls;
 	
-	@RequestMapping(value = "/user", method = RequestMethod.POST, produces = {"application/json"})
-	public User getUsers(@RequestParam(required = false) String userName, @RequestParam(required = false) String password) {
+	@RequestMapping(value = "/learner", method = RequestMethod.GET, produces = {"application/json"})
+	public User getUsers(@RequestParam(required=false) String userName, @RequestParam(required=false) String password) {
 		System.out.println(userName +"_"+ password);
 		apiCalls.learnerInfoGatherer(userName, password);
 		
