@@ -32,4 +32,5 @@ public class CourseList {
 	private String courseenddate;
 	private String courseenrollmentdate;
 	private String courseinstructionmethod;
+	private String coursestatus;
 }

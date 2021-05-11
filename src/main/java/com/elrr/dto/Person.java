@@ -25,6 +25,7 @@ import lombok.ToString;
 public class Person {
 	
 	private long id;
+	private String userrole;
 	private String name;
 	private String preferredname;
 	private String title;

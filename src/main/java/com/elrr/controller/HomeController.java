@@ -12,9 +12,10 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.elrr.apiCalls.ApiCalls;
+import com.elrr.dto.TrainingManager;
 import com.elrr.dto.User;
 
-@CrossOrigin(origins = {"http://localhost:3001", "http://localhost:3004","http://localhost:5000"})
+@CrossOrigin(origins = {"http://localhost:3000", "http://localhost:3000", "http://localhost:5000"})
 @RestController
 @RequestMapping("api")
 public class HomeController {
@@ -25,11 +26,11 @@ public class HomeController {
 	private ApiCalls apiCalls;
 	
 	@RequestMapping(value = "/learner", method = RequestMethod.GET, produces = {"application/json"})
-	public User getUsers(@RequestParam(required=false) String userName, @RequestParam(required=false) String password) {
+	public TrainingManager getUsers(@RequestParam(required=false) String userName, @RequestParam(required=false) String password) {
 		System.out.println(userName +"_"+ password);
 		apiCalls.learnerInfoGatherer(userName, password);
 		
-		User user = new User();
+		TrainingManager user = new TrainingManager();
 //		user = userCreatorSvc.userCreator();
 		user = apiCalls.learnerInfoGatherer(userName, password);
 		
