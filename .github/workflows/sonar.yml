@@ -17,7 +17,6 @@ on:
 
 jobs:
 
-      
   Static-Scanning:
     environment: pipeline-environment
     runs-on: ubuntu-latest
