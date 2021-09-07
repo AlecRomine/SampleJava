@@ -13,8 +13,6 @@ on:
       -  "cts/**"
 ## ignore the other projects in the group repo
 
-
-
 jobs:
 
   Static-Scanning:
